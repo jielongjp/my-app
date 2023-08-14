@@ -1,6 +1,7 @@
 import { FC } from "react";
 import Head from "next/head";
 import { Header } from "../organisms/Header";
+import { Footer } from "../organisms/Footer";
 
 type Props = {
   title: string;
@@ -17,7 +18,7 @@ export const Template: FC<Props> = ({ title, children }) => {
       </Head>
       <Header />
       {children}
-      <footer></footer>
+      <Footer />
     </div>
   );
 };
