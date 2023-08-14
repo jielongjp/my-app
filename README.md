@@ -1,3 +1,6 @@
+Following the following tutorial to get familiar with skyticket hotel tech stack:
+https://knowledge.adventurekk.com/knowledge/open.knowledge/view/58?offset=0&tagNames=%E6%96%B0%E4%BA%BA%E7%A0%94%E4%BF%AE%E8%B3%87%E6%96%99
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
