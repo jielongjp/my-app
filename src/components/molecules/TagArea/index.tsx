@@ -59,6 +59,7 @@ const StTag = styled.li`
   margin-right: 8px;
   padding: 4px 12px;
   font-size: 12px;
+  height: fit-content;
 `;
 
 const StSelectAreaWrapper = styled.div`

@@ -9,11 +9,12 @@ export const Footer: FC = () => {
   );
 };
 
-const StFooterRoot = styled.header`
+const StFooterRoot = styled.footer`
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   width: 100%;
   padding: 12px;
-  position: absolute;
+  left: 0;
   bottom: 0;
+  right: 0;
 `;

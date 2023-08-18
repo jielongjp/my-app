@@ -2,12 +2,10 @@ import { FC, useState } from "react";
 import styled from "styled-components";
 import { Counter } from "../../molecules/Counter";
 import { TagArea, TagList } from "../../molecules/TagArea";
+import { Techstack } from "../../molecules/Techstack";
+import { useCount } from "./hooks";
 
 export const TopContent: FC = () => {
-  const [count, setCount] = useState(0);
-  const handleIncrement = () => setCount(count + 1);
-  const handleDecrement = () => setCount(count - 1);
-
   const [tag, setTag] = useState<string[]>([]);
   const handleClearTag = () => setTag([]);
   const handlePushTag = (clickedTag: string) => {
@@ -28,8 +26,10 @@ export const TopContent: FC = () => {
     { id: "tag7", value: "Gatsby.js" },
   ];
 
+  const { count, handleIncrement, handleDecrement, resetCount } = useCount();
+
   return (
-    <div>
+    <StRoot>
       <StTextBox>
         <h1>react初心者向け講座</h1>
       </StTextBox>
@@ -39,6 +39,7 @@ export const TopContent: FC = () => {
           count={count}
           handleIncrement={handleIncrement}
           handleDecrement={handleDecrement}
+          resetCount={resetCount}
         />
       </StArticle>
       <StArticle>
@@ -50,9 +51,17 @@ export const TopContent: FC = () => {
           handlePushTag={handlePushTag}
         />
       </StArticle>
-    </div>
+      <StArticle>
+        <StArticleTitle>興味のある言語/フレームワーク</StArticleTitle>
+        <Techstack />
+      </StArticle>
+    </StRoot>
   );
 };
+
+const StRoot = styled.div`
+  min-height: 600px;
+`;
 
 const StTextBox = styled.div`
   background-color: #ffffff;
@@ -68,6 +77,7 @@ const StArticle = styled.div`
   border: 1px solid grey;
   border-radius: 2px;
   margin: 12px;
+  margin-bottom: 12;
 `;
 
 const StArticleTitle = styled.div`
