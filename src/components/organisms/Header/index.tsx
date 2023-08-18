@@ -13,4 +13,5 @@ const StHeaderRoot = styled.header`
   background-color: rgb(27, 161, 255);
   color: rgb(255, 255, 255);
   width: 100%;
+  padding: 12px;
 `;
